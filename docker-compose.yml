@@ -14,6 +14,7 @@ services: # Start with this tag. This will contain all the containers you want t
     build: # Build the image from the Dockerfile
       context: ./client # Path to the Dockerfile
       dockerfile: Dockerfile  # Name of the Dockerfile
+    image: ci-cd-example_frontend:latest # Name of the image
     container_name: frontend
     ports:
       - '80:3000'
@@ -30,6 +31,7 @@ services: # Start with this tag. This will contain all the containers you want t
     build:
       context: ./backend
       dockerfile: Dockerfile
+    image: ci-cd-example_backend:latest
     container_name: backend
     ports:
       - "5000:5000"
